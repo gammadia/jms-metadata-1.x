@@ -12,6 +12,8 @@ namespace Metadata;
  */
 class PropertyMetadata implements \Serializable
 {
+    use SerializationHelper;
+
     public $class;
     public $name;
     public $reflection;
@@ -44,17 +46,23 @@ class PropertyMetadata implements \Serializable
         $this->reflection->setValue($obj, $value);
     }
 
-    public function serialize()
+    /**
+     * @return mixed[]
+     */
+    protected function serializeToArray(): array
     {
-        return serialize(array(
+        return [
             $this->class,
             $this->name,
-        ));
+        ];
     }
 
-    public function unserialize($str)
+    /**
+     * @param mixed[] $data
+     */
+    protected function unserializeFromArray(array $data): void
     {
-        list($this->class, $this->name) = unserialize($str);
+        [$this->class, $this->name] = $data;
 
         $this->reflection = new \ReflectionProperty($this->class, $this->name);
         $this->reflection->setAccessible(true);

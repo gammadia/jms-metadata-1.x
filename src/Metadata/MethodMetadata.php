@@ -12,6 +12,8 @@ namespace Metadata;
  */
 class MethodMetadata implements \Serializable
 {
+    use SerializationHelper;
+
     public $class;
     public $name;
     public $reflection;
@@ -36,14 +38,20 @@ class MethodMetadata implements \Serializable
         return $this->reflection->invokeArgs($obj, $args);
     }
 
-    public function serialize()
+    /**
+     * @return mixed[]
+     */
+    protected function serializeToArray(): array
     {
-        return serialize(array($this->class, $this->name));
+        return [$this->class, $this->name];
     }
 
-    public function unserialize($str)
+    /**
+     * @param mixed[] $data
+     */
+    protected function unserializeFromArray(array $data): void
     {
-        list($this->class, $this->name) = unserialize($str);
+        [$this->class, $this->name] = $data;
 
         $this->reflection = new \ReflectionMethod($this->class, $this->name);
         $this->reflection->setAccessible(true);

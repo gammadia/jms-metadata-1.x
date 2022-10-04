@@ -141,11 +141,6 @@ parameters:
 			path: src/Metadata/ClassHierarchyMetadata.php
 
 		-
-			message: "#^Cannot use array destructuring on mixed\\.$#"
-			count: 1
-			path: src/Metadata/ClassMetadata.php
-
-		-
 			message: "#^Method Metadata\\\\ClassMetadata\\:\\:__construct\\(\\) has parameter \\$name with no type specified\\.$#"
 			count: 1
 			path: src/Metadata/ClassMetadata.php
@@ -426,11 +421,6 @@ parameters:
 			path: src/Metadata/MetadataFactory.php
 
 		-
-			message: "#^Cannot use array destructuring on mixed\\.$#"
-			count: 1
-			path: src/Metadata/MethodMetadata.php
-
-		-
 			message: "#^Method Metadata\\\\MethodMetadata\\:\\:__construct\\(\\) has parameter \\$class with no type specified\\.$#"
 			count: 1
 			path: src/Metadata/MethodMetadata.php
@@ -469,11 +459,6 @@ parameters:
 			message: "#^Property Metadata\\\\MethodMetadata\\:\\:\\$reflection has no type specified\\.$#"
 			count: 1
 			path: src/Metadata/MethodMetadata.php
-
-		-
-			message: "#^Cannot use array destructuring on mixed\\.$#"
-			count: 1
-			path: src/Metadata/PropertyMetadata.php
 
 		-
 			message: "#^Method Metadata\\\\PropertyMetadata\\:\\:__construct\\(\\) has parameter \\$class with no type specified\\.$#"
