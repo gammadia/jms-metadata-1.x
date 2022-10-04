@@ -4,7 +4,7 @@ namespace Metadata\Tests;
 
 use Metadata\MergeableClassMetadata;
 
-class MergeableClassMetadataTest extends \PHPUnit_Framework_TestCase
+class MergeableClassMetadataTest extends \PHPUnit\Framework\TestCase
 {
     public function testMerge()
     {

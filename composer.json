@@ -1,9 +1,12 @@
 {
-    "name": "jms/metadata",
-    "description": "Class/method/property metadata management in PHP",
+    "name": "gammadia/jms-metadata-1.x",
+    "description": "Fork of jms/metadata 1.7.0 with support for modern PHP versions.",
     "keywords": ["annotations","metadata","yaml","xml"],
     "type": "library",
     "license": "MIT",
+    "replace": {
+        "jms/metadata": "^1.7"
+    },
     "authors": [
         {
             "name": "Johannes M. Schmitt",
@@ -15,10 +18,13 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0"
+        "php": "^7.2|^8.0"
     },
     "require-dev" : {
         "doctrine/cache" : "~1.0",
+        "overtrue/phplint": "^3.0|^4.0|^5.0|^6.0",
+        "phpstan/phpstan": "^1.8",
+        "phpunit/phpunit": "^7.5|^8.5|^9.5",
         "symfony/cache" : "~3.1"
     },
     "autoload": {

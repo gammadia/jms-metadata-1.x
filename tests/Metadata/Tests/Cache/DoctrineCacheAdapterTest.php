@@ -9,9 +9,9 @@ use Doctrine\Common\Cache\ArrayCache;
 /**
  * @requires PHP 5.4
  */
-class DoctrineCacheAdapterTest extends \PHPUnit_Framework_TestCase
+class DoctrineCacheAdapterTest extends \PHPUnit\Framework\TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         if (!interface_exists('Doctrine\Common\Cache\Cache')) {
             $this->markTestSkipped('Doctrine\Common is not installed.');

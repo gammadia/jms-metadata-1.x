@@ -1,0 +1,796 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method Metadata\\\\AdvancedMetadataFactoryInterface\\:\\:getAllClassNames\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Metadata/AdvancedMetadataFactoryInterface.php
+
+		-
+			message: "#^Method Metadata\\\\Cache\\\\CacheInterface\\:\\:evictClassMetadataFromCache\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Cache/CacheInterface.php
+
+		-
+			message: "#^Method Metadata\\\\Cache\\\\CacheInterface\\:\\:loadClassMetadataFromCache\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Cache/CacheInterface.php
+
+		-
+			message: "#^Method Metadata\\\\Cache\\\\DoctrineCacheAdapter\\:\\:evictClassMetadataFromCache\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Cache/DoctrineCacheAdapter.php
+
+		-
+			message: "#^Method Metadata\\\\Cache\\\\DoctrineCacheAdapter\\:\\:loadClassMetadataFromCache\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Cache/DoctrineCacheAdapter.php
+
+		-
+			message: "#^Method Metadata\\\\Cache\\\\DoctrineCacheAdapter\\:\\:loadClassMetadataFromCache\\(\\) should return Metadata\\\\ClassMetadata but returns mixed\\.$#"
+			count: 1
+			path: src/Metadata/Cache/DoctrineCacheAdapter.php
+
+		-
+			message: "#^Property Metadata\\\\Cache\\\\DoctrineCacheAdapter\\:\\:\\$prefix has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/Cache/DoctrineCacheAdapter.php
+
+		-
+			message: "#^Method Metadata\\\\Cache\\\\FileCache\\:\\:__construct\\(\\) has parameter \\$dir with no type specified\\.$#"
+			count: 1
+			path: src/Metadata/Cache/FileCache.php
+
+		-
+			message: "#^Method Metadata\\\\Cache\\\\FileCache\\:\\:evictClassMetadataFromCache\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Cache/FileCache.php
+
+		-
+			message: "#^Method Metadata\\\\Cache\\\\FileCache\\:\\:loadClassMetadataFromCache\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Cache/FileCache.php
+
+		-
+			message: "#^Method Metadata\\\\Cache\\\\FileCache\\:\\:loadClassMetadataFromCache\\(\\) should return Metadata\\\\ClassMetadata but returns null\\.$#"
+			count: 1
+			path: src/Metadata/Cache/FileCache.php
+
+		-
+			message: "#^Method Metadata\\\\Cache\\\\FileCache\\:\\:renameFile\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/Cache/FileCache.php
+
+		-
+			message: "#^Parameter \\#1 \\$filename of function chmod expects string, string\\|false given\\.$#"
+			count: 1
+			path: src/Metadata/Cache/FileCache.php
+
+		-
+			message: "#^Parameter \\#1 \\$filename of function file_put_contents expects string, string\\|false given\\.$#"
+			count: 1
+			path: src/Metadata/Cache/FileCache.php
+
+		-
+			message: "#^Parameter \\#1 \\$source of method Metadata\\\\Cache\\\\FileCache\\:\\:renameFile\\(\\) expects string, string\\|false given\\.$#"
+			count: 1
+			path: src/Metadata/Cache/FileCache.php
+
+		-
+			message: "#^Property Metadata\\\\Cache\\\\FileCache\\:\\:\\$dir has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/Cache/FileCache.php
+
+		-
+			message: "#^Method Metadata\\\\Cache\\\\PsrCacheAdapter\\:\\:__construct\\(\\) has parameter \\$prefix with no type specified\\.$#"
+			count: 1
+			path: src/Metadata/Cache/PsrCacheAdapter.php
+
+		-
+			message: "#^Method Metadata\\\\Cache\\\\PsrCacheAdapter\\:\\:evictClassMetadataFromCache\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Cache/PsrCacheAdapter.php
+
+		-
+			message: "#^Method Metadata\\\\Cache\\\\PsrCacheAdapter\\:\\:loadClassMetadataFromCache\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Cache/PsrCacheAdapter.php
+
+		-
+			message: "#^Property Metadata\\\\Cache\\\\PsrCacheAdapter\\:\\:\\$lastItem has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/Cache/PsrCacheAdapter.php
+
+		-
+			message: "#^Property Metadata\\\\Cache\\\\PsrCacheAdapter\\:\\:\\$pool has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/Cache/PsrCacheAdapter.php
+
+		-
+			message: "#^Property Metadata\\\\Cache\\\\PsrCacheAdapter\\:\\:\\$prefix has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/Cache/PsrCacheAdapter.php
+
+		-
+			message: "#^Method Metadata\\\\ClassHierarchyMetadata\\:\\:addClassMetadata\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassHierarchyMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\ClassHierarchyMetadata\\:\\:getOutsideClassMetadata\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassHierarchyMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\ClassHierarchyMetadata\\:\\:getRootClassMetadata\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassHierarchyMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\ClassHierarchyMetadata\\:\\:isFresh\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassHierarchyMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\ClassHierarchyMetadata\\:\\:isFresh\\(\\) has parameter \\$timestamp with no type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassHierarchyMetadata.php
+
+		-
+			message: "#^Property Metadata\\\\ClassHierarchyMetadata\\:\\:\\$classMetadata has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassHierarchyMetadata.php
+
+		-
+			message: "#^Cannot use array destructuring on mixed\\.$#"
+			count: 1
+			path: src/Metadata/ClassMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\ClassMetadata\\:\\:__construct\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\ClassMetadata\\:\\:addMethodMetadata\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\ClassMetadata\\:\\:addPropertyMetadata\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\ClassMetadata\\:\\:isFresh\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\ClassMetadata\\:\\:isFresh\\(\\) has parameter \\$timestamp with no type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassMetadata.php
+
+		-
+			message: "#^Parameter \\#1 \\$objectOrClass of class ReflectionClass constructor expects class\\-string\\<T of object\\>\\|T of object, mixed given\\.$#"
+			count: 1
+			path: src/Metadata/ClassMetadata.php
+
+		-
+			message: "#^Property Metadata\\\\ClassMetadata\\:\\:\\$createdAt has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassMetadata.php
+
+		-
+			message: "#^Property Metadata\\\\ClassMetadata\\:\\:\\$fileResources has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassMetadata.php
+
+		-
+			message: "#^Property Metadata\\\\ClassMetadata\\:\\:\\$methodMetadata has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassMetadata.php
+
+		-
+			message: "#^Property Metadata\\\\ClassMetadata\\:\\:\\$name has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassMetadata.php
+
+		-
+			message: "#^Property Metadata\\\\ClassMetadata\\:\\:\\$propertyMetadata has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassMetadata.php
+
+		-
+			message: "#^Property Metadata\\\\ClassMetadata\\:\\:\\$reflection has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/ClassMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\AbstractFileDriver\\:\\:getAllClassNames\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Metadata/Driver/AbstractFileDriver.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\AbstractFileDriver\\:\\:loadMetadataForClass\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Driver/AbstractFileDriver.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\AbstractFileDriver\\:\\:loadMetadataForClass\\(\\) should return Metadata\\\\ClassMetadata but returns Metadata\\\\ClassMetadata\\|null\\.$#"
+			count: 1
+			path: src/Metadata/Driver/AbstractFileDriver.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\AbstractFileDriver\\:\\:loadMetadataForClass\\(\\) should return Metadata\\\\ClassMetadata but returns null\\.$#"
+			count: 1
+			path: src/Metadata/Driver/AbstractFileDriver.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\AbstractFileDriver\\:\\:loadMetadataFromFile\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Driver/AbstractFileDriver.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\AdvancedDriverInterface\\:\\:getAllClassNames\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Metadata/Driver/AdvancedDriverInterface.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\AdvancedFileLocatorInterface\\:\\:findAllClasses\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Metadata/Driver/AdvancedFileLocatorInterface.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\DriverChain\\:\\:__construct\\(\\) has parameter \\$drivers with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Metadata/Driver/DriverChain.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\DriverChain\\:\\:addDriver\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/Driver/DriverChain.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\DriverChain\\:\\:getAllClassNames\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Metadata/Driver/DriverChain.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\DriverChain\\:\\:loadMetadataForClass\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Driver/DriverChain.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\DriverChain\\:\\:loadMetadataForClass\\(\\) should return Metadata\\\\ClassMetadata but returns null\\.$#"
+			count: 1
+			path: src/Metadata/Driver/DriverChain.php
+
+		-
+			message: "#^Property Metadata\\\\Driver\\\\DriverChain\\:\\:\\$drivers has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/Driver/DriverChain.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\DriverInterface\\:\\:loadMetadataForClass\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Driver/DriverInterface.php
+
+		-
+			message: "#^Cannot call method getBasename\\(\\) on mixed\\.$#"
+			count: 2
+			path: src/Metadata/Driver/FileLocator.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\FileLocator\\:\\:__construct\\(\\) has parameter \\$dirs with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Metadata/Driver/FileLocator.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\FileLocator\\:\\:findAllClasses\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Metadata/Driver/FileLocator.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\FileLocator\\:\\:findFileForClass\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Driver/FileLocator.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\FileLocator\\:\\:getDirs\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/Driver/FileLocator.php
+
+		-
+			message: "#^PHPDoc tag @var has invalid value \\(\\$iterator \\\\RecursiveIteratorIterator\\|\\\\SplFileInfo\\[\\]\\)\\: Unexpected token \"\\$iterator\", expected type at offset 9$#"
+			count: 1
+			path: src/Metadata/Driver/FileLocator.php
+
+		-
+			message: "#^Property Metadata\\\\Driver\\\\FileLocator\\:\\:\\$dirs has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/Driver/FileLocator.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\FileLocatorInterface\\:\\:findFileForClass\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Driver/FileLocatorInterface.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\LazyLoadingDriver\\:\\:__construct\\(\\) has parameter \\$realDriverId with no type specified\\.$#"
+			count: 1
+			path: src/Metadata/Driver/LazyLoadingDriver.php
+
+		-
+			message: "#^Method Metadata\\\\Driver\\\\LazyLoadingDriver\\:\\:loadMetadataForClass\\(\\) has parameter \\$class with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: src/Metadata/Driver/LazyLoadingDriver.php
+
+		-
+			message: "#^Parameter \\$container of method Metadata\\\\Driver\\\\LazyLoadingDriver\\:\\:__construct\\(\\) has invalid type Symfony\\\\Component\\\\DependencyInjection\\\\ContainerInterface\\.$#"
+			count: 1
+			path: src/Metadata/Driver/LazyLoadingDriver.php
+
+		-
+			message: "#^Property Metadata\\\\Driver\\\\LazyLoadingDriver\\:\\:\\$container has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/Driver/LazyLoadingDriver.php
+
+		-
+			message: "#^Property Metadata\\\\Driver\\\\LazyLoadingDriver\\:\\:\\$realDriverId has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/Driver/LazyLoadingDriver.php
+
+		-
+			message: "#^Call to an undefined method Metadata\\\\ClassMetadata\\:\\:merge\\(\\)\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Call to an undefined method object\\:\\:addClassMetadata\\(\\)\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Method Metadata\\\\MetadataFactory\\:\\:addClassMetadata\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Method Metadata\\\\MetadataFactory\\:\\:filterNullMetadata\\(\\) never returns Metadata\\\\ClassMetadata so it can be removed from the return type\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Method Metadata\\\\MetadataFactory\\:\\:getAllClassNames\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Method Metadata\\\\MetadataFactory\\:\\:getClassHierarchy\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Method Metadata\\\\MetadataFactory\\:\\:getMetadataForClass\\(\\) should return Metadata\\\\ClassHierarchyMetadata\\|Metadata\\\\MergeableClassMetadata\\|null but returns Metadata\\\\ClassMetadata\\|null\\.$#"
+			count: 2
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Method Metadata\\\\MetadataFactory\\:\\:setCache\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Method Metadata\\\\MetadataFactory\\:\\:setIncludeInterfaces\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Parameter \\#1 \\$objectOrClass of class ReflectionClass constructor expects class\\-string\\<T of object\\>\\|T of object, string given\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Property Metadata\\\\MetadataFactory\\:\\:\\$cache has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Property Metadata\\\\MetadataFactory\\:\\:\\$debug has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Property Metadata\\\\MetadataFactory\\:\\:\\$driver has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Property Metadata\\\\MetadataFactory\\:\\:\\$hierarchyMetadataClass has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Property Metadata\\\\MetadataFactory\\:\\:\\$includeInterfaces has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Property Metadata\\\\MetadataFactory\\:\\:\\$loadedClassMetadata has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Property Metadata\\\\MetadataFactory\\:\\:\\$loadedMetadata has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/MetadataFactory.php
+
+		-
+			message: "#^Cannot use array destructuring on mixed\\.$#"
+			count: 1
+			path: src/Metadata/MethodMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\MethodMetadata\\:\\:__construct\\(\\) has parameter \\$class with no type specified\\.$#"
+			count: 1
+			path: src/Metadata/MethodMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\MethodMetadata\\:\\:__construct\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: src/Metadata/MethodMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\MethodMetadata\\:\\:invoke\\(\\) has parameter \\$args with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Metadata/MethodMetadata.php
+
+		-
+			message: "#^Parameter \\#1 \\$objectOrMethod of class ReflectionMethod constructor expects object\\|string, mixed given\\.$#"
+			count: 1
+			path: src/Metadata/MethodMetadata.php
+
+		-
+			message: "#^Parameter \\#2 \\$method of class ReflectionMethod constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Metadata/MethodMetadata.php
+
+		-
+			message: "#^Property Metadata\\\\MethodMetadata\\:\\:\\$class has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/MethodMetadata.php
+
+		-
+			message: "#^Property Metadata\\\\MethodMetadata\\:\\:\\$name has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/MethodMetadata.php
+
+		-
+			message: "#^Property Metadata\\\\MethodMetadata\\:\\:\\$reflection has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/MethodMetadata.php
+
+		-
+			message: "#^Cannot use array destructuring on mixed\\.$#"
+			count: 1
+			path: src/Metadata/PropertyMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\PropertyMetadata\\:\\:__construct\\(\\) has parameter \\$class with no type specified\\.$#"
+			count: 1
+			path: src/Metadata/PropertyMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\PropertyMetadata\\:\\:__construct\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: src/Metadata/PropertyMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\PropertyMetadata\\:\\:setValue\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Metadata/PropertyMetadata.php
+
+		-
+			message: "#^Parameter \\#1 \\$class of class ReflectionProperty constructor expects object\\|string, mixed given\\.$#"
+			count: 1
+			path: src/Metadata/PropertyMetadata.php
+
+		-
+			message: "#^Parameter \\#2 \\$property of class ReflectionProperty constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Metadata/PropertyMetadata.php
+
+		-
+			message: "#^Property Metadata\\\\PropertyMetadata\\:\\:\\$class has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/PropertyMetadata.php
+
+		-
+			message: "#^Property Metadata\\\\PropertyMetadata\\:\\:\\$name has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/PropertyMetadata.php
+
+		-
+			message: "#^Property Metadata\\\\PropertyMetadata\\:\\:\\$reflection has no type specified\\.$#"
+			count: 1
+			path: src/Metadata/PropertyMetadata.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Cache\\\\DoctrineCacheAdapterTest\\:\\:testLoadEvictPutClassMetadataFromInCache\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Cache/DoctrineCacheAdapterTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Cache\\\\FileCacheTest\\:\\:testLoadEvictPutClassMetadataFromInCache\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Cache/FileCacheTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Cache\\\\PsrCacheAdapterTest\\:\\:testLoadEvictPutClassMetadataFromInCache\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Cache/PsrCacheAdapterTest.php
+
+		-
+			message: "#^Call to method ReflectionClass\\<Metadata\\\\Tests\\\\Fixtures\\\\TestObject\\>\\:\\:getFileName\\(\\) with incorrect case\\: getFilename$#"
+			count: 4
+			path: tests/Metadata/Tests/ClassMetadataTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\ClassMetadataTest\\:\\:testConstructor\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/ClassMetadataTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\ClassMetadataTest\\:\\:testIsFresh\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/ClassMetadataTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\ClassMetadataTest\\:\\:testSerializeUnserialize\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/ClassMetadataTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$clear_realpath_cache of function clearstatcache expects bool, string\\|false given\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/ClassMetadataTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$filename of function touch expects string, string\\|false given\\.$#"
+			count: 2
+			path: tests/Metadata/Tests/ClassMetadataTest.php
+
+		-
+			message: "#^Call to an undefined method PHPUnit\\\\Framework\\\\MockObject\\\\MockObject\\:\\:getAllClassNames\\(\\)\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Driver/AbstractFileDriverTest.php
+
+		-
+			message: "#^Call to an undefined method PHPUnit\\\\Framework\\\\MockObject\\\\MockObject\\:\\:loadMetadataForClass\\(\\)\\.$#"
+			count: 2
+			path: tests/Metadata/Tests/Driver/AbstractFileDriverTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Driver\\\\AbstractFileDriverTest\\:\\:testGetAllClassNames\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Driver/AbstractFileDriverTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Driver\\\\AbstractFileDriverTest\\:\\:testLoadMetadataForClass\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Driver/AbstractFileDriverTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Driver\\\\AbstractFileDriverTest\\:\\:testLoadMetadataForClassWillReturnNull\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Driver/AbstractFileDriverTest.php
+
+		-
+			message: "#^Property Metadata\\\\Tests\\\\Driver\\\\AbstractFileDriverTest\\:\\:\\$extension has no type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Driver/AbstractFileDriverTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Driver\\\\DriverChainTest\\:\\:testGetAllClassNames\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Driver/DriverChainTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Driver\\\\DriverChainTest\\:\\:testLoadMetadataForClass\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Driver/DriverChainTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Driver\\\\DriverChainTest\\:\\:testLoadMetadataForClassReturnsNullWhenNoMetadataIsFound\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Driver/DriverChainTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Driver\\\\FileLocatorTest\\:\\:testFindAllFiles\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Driver/FileLocatorTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Driver\\\\FileLocatorTest\\:\\:testFindFileForClass\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Driver/FileLocatorTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Driver\\\\FileLocatorTest\\:\\:testFindFileForGlobalNamespacedClass\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Driver/FileLocatorTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Driver\\\\FileLocatorTest\\:\\:testTraits\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Driver/FileLocatorTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$path of function realpath expects string, string\\|null given\\.$#"
+			count: 4
+			path: tests/Metadata/Tests/Driver/FileLocatorTest.php
+
+		-
+			message: "#^Trait Metadata\\\\Tests\\\\Driver\\\\Fixture\\\\T\\\\T is used zero times and is not analysed\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Driver/Fixture/T/T.php
+
+		-
+			message: "#^Property Metadata\\\\Tests\\\\Fixtures\\\\ComplexHierarchy\\\\BaseClass\\:\\:\\$foo has no type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Fixtures/ComplexHierarchy/BaseClass.php
+
+		-
+			message: "#^Property Metadata\\\\Tests\\\\Fixtures\\\\ComplexHierarchy\\\\BaseClass\\:\\:\\$foo is unused\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Fixtures/ComplexHierarchy/BaseClass.php
+
+		-
+			message: "#^Property Metadata\\\\Tests\\\\Fixtures\\\\ComplexHierarchy\\\\SubClassA\\:\\:\\$bar has no type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Fixtures/ComplexHierarchy/SubClassA.php
+
+		-
+			message: "#^Property Metadata\\\\Tests\\\\Fixtures\\\\ComplexHierarchy\\\\SubClassA\\:\\:\\$bar is unused\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Fixtures/ComplexHierarchy/SubClassA.php
+
+		-
+			message: "#^Property Metadata\\\\Tests\\\\Fixtures\\\\ComplexHierarchy\\\\SubClassB\\:\\:\\$baz has no type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Fixtures/ComplexHierarchy/SubClassB.php
+
+		-
+			message: "#^Property Metadata\\\\Tests\\\\Fixtures\\\\ComplexHierarchy\\\\SubClassB\\:\\:\\$baz is unused\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Fixtures/ComplexHierarchy/SubClassB.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Fixtures\\\\TestObject\\:\\:getFoo\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Fixtures/TestObject.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Fixtures\\\\TestObject\\:\\:setFoo\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Fixtures/TestObject.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Fixtures\\\\TestObject\\:\\:setFoo\\(\\) has parameter \\$foo with no type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Fixtures/TestObject.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\Fixtures\\\\TestObject\\:\\:setFoo\\(\\) is unused\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Fixtures/TestObject.php
+
+		-
+			message: "#^Property Metadata\\\\Tests\\\\Fixtures\\\\TestObject\\:\\:\\$foo has no type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/Fixtures/TestObject.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\MergeableClassMetadataTest\\:\\:testMerge\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MergeableClassMetadataTest.php
+
+		-
+			message: "#^Cannot access property \\$classMetadata on Metadata\\\\ClassHierarchyMetadata\\|Metadata\\\\MergeableClassMetadata\\|null\\.$#"
+			count: 2
+			path: tests/Metadata/Tests/MetadataFactoryTest.php
+
+		-
+			message: "#^Cannot access property \\$name on Metadata\\\\ClassHierarchyMetadata\\|Metadata\\\\MergeableClassMetadata\\|null\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MetadataFactoryTest.php
+
+		-
+			message: "#^Cannot access property \\$propertyMetadata on Metadata\\\\ClassHierarchyMetadata\\|Metadata\\\\MergeableClassMetadata\\|null\\.$#"
+			count: 2
+			path: tests/Metadata/Tests/MetadataFactoryTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\MetadataFactoryTest\\:\\:testGetAllClassNames\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MetadataFactoryTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\MetadataFactoryTest\\:\\:testGetAllClassNamesThrowsException\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MetadataFactoryTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\MetadataFactoryTest\\:\\:testGetMetadataForClass\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MetadataFactoryTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\MetadataFactoryTest\\:\\:testGetMetadataForClassWhenMergeable\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MetadataFactoryTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\MetadataFactoryTest\\:\\:testGetMetadataReturnsNullIfNoMetadataIsFound\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MetadataFactoryTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\MetadataFactoryTest\\:\\:testGetMetadataWithCache\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MetadataFactoryTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\MetadataFactoryTest\\:\\:testGetMetadataWithComplexHierarchy\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MetadataFactoryTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\MetadataFactoryTest\\:\\:testGetMetadataWithInterfaces\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MetadataFactoryTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\MetadataFactoryTest\\:\\:testNotFoundMetadataIsCached\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MetadataFactoryTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\MetadataFactoryTest\\:\\:testNotFoundMetadataIsNotCachedInDebug\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MetadataFactoryTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\MethodMetadataTest\\:\\:testConstructor\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MethodMetadataTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\MethodMetadataTest\\:\\:testInvoke\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MethodMetadataTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\MethodMetadataTest\\:\\:testSerializeUnserialize\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/MethodMetadataTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\PropertyMetadataTest\\:\\:testConstructor\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/PropertyMetadataTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\PropertyMetadataTest\\:\\:testSerializeUnserialize\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/PropertyMetadataTest.php
+
+		-
+			message: "#^Method Metadata\\\\Tests\\\\PropertyMetadataTest\\:\\:testSetGetValue\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Metadata/Tests/PropertyMetadataTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function spl_autoload_register expects \\(callable\\(string\\)\\: void\\)\\|null, Closure\\(mixed\\)\\: true given\\.$#"
+			count: 1
+			path: tests/bootstrap.php

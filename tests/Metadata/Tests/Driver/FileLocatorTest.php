@@ -4,7 +4,7 @@ namespace Metadata\Tests\Driver;
 
 use Metadata\Driver\FileLocator;
 
-class FileLocatorTest extends \PHPUnit_Framework_TestCase
+class FileLocatorTest extends \PHPUnit\Framework\TestCase
 {
     public function testFindFileForClass()
     {

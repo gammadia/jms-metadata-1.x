@@ -9,9 +9,9 @@ use Symfony\Component\Cache\Adapter\ArrayAdapter;
 /**
  * @requires PHP 5.5
  */
-class PsrCacheAdapterTest extends \PHPUnit_Framework_TestCase
+class PsrCacheAdapterTest extends \PHPUnit\Framework\TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         if (!class_exists('Symfony\Component\Cache\CacheItem')) {
             $this->markTestSkipped('symfony/cache is not installed.');

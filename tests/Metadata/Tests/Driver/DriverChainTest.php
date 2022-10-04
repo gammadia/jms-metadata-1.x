@@ -5,11 +5,11 @@ namespace Metadata\Tests\Driver;
 use Metadata\ClassMetadata;
 use Metadata\Driver\DriverChain;
 
-class DriverChainTest extends \PHPUnit_Framework_TestCase
+class DriverChainTest extends \PHPUnit\Framework\TestCase
 {
     public function testLoadMetadataForClass()
     {
-        $driver = $this->getMock('Metadata\\Driver\\DriverInterface');
+        $driver = $this->createMock('Metadata\\Driver\\DriverInterface');
         $driver
             ->expects($this->once())
             ->method('loadMetadataForClass')
@@ -22,13 +22,13 @@ class DriverChainTest extends \PHPUnit_Framework_TestCase
 
     public function testGetAllClassNames()
     {
-        $driver1 = $this->getMock('Metadata\\Driver\\AdvancedDriverInterface');
+        $driver1 = $this->createMock('Metadata\\Driver\\AdvancedDriverInterface');
         $driver1
             ->expects($this->once())
             ->method('getAllClassNames')
             ->will($this->returnValue(array('Foo')));
 
-        $driver2 = $this->getMock('Metadata\\Driver\\AdvancedDriverInterface');
+        $driver2 = $this->createMock('Metadata\\Driver\\AdvancedDriverInterface');
         $driver2
             ->expects($this->once())
             ->method('getAllClassNames')
@@ -44,7 +44,7 @@ class DriverChainTest extends \PHPUnit_Framework_TestCase
         $driver = new DriverChain(array());
         $this->assertNull($driver->loadMetadataForClass(new \ReflectionClass('\stdClass')));
 
-        $driver = $this->getMock('Metadata\\Driver\\DriverInterface');
+        $driver = $this->createMock('Metadata\\Driver\\DriverInterface');
         $driver
             ->expects($this->once())
             ->method('loadMetadataForClass')
@@ -52,14 +52,5 @@ class DriverChainTest extends \PHPUnit_Framework_TestCase
         ;
         $driverChain = new DriverChain(array($driver));
         $this->assertNull($driver->loadMetadataForClass(new \ReflectionClass('\stdClass')));
-    }
-
-    public function testGetAllClassNamesThrowsException()
-    {
-        $this->setExpectedException('RuntimeException');
-        $driver = $this->getMock('Metadata\\Driver\\DriverInterface');
-        $driver->expects($this->never())->method('getAllClassNames');
-        $chain = new DriverChain(array($driver));
-        $chain->getAllClassNames();
     }
 }
