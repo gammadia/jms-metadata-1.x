@@ -5,7 +5,7 @@ namespace Metadata\Tests\Cache;
 use Metadata\ClassMetadata;
 use Metadata\Cache\FileCache;
 
-class FileCacheTest extends \PHPUnit_Framework_TestCase
+class FileCacheTest extends \PHPUnit\Framework\TestCase
 {
     public function testLoadEvictPutClassMetadataFromInCache()
     {

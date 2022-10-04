@@ -7,19 +7,19 @@ use Metadata\ClassMetadata;
 /**
  * @author Jordan Stout <j@jrdn.org>
  */
-class AbstractFileDriverTest extends \PHPUnit_Framework_TestCase
+class AbstractFileDriverTest extends \PHPUnit\Framework\TestCase
 {
     private static $extension = 'jms_metadata.yml';
 
-    /** @var \PHPUnit_Framework_MockObject_MockObject */
+    /** @var \PHPUnit\Framework\MockObject\MockObject */
     private $locator;
 
-    /** @var \PHPUnit_Framework_MockObject_MockObject */
+    /** @var \PHPUnit\Framework\MockObject\MockObject */
     private $driver;
 
-    public function setUp()
+    public function setUp(): void
     {
-        $this->locator = $this->getMock('Metadata\Driver\FileLocator', array(), array(), '', false);
+        $this->locator = $this->createMock('Metadata\Driver\FileLocator');
         $this->driver = $this->getMockBuilder('Metadata\Driver\AbstractFileDriver')
             ->setConstructorArgs(array($this->locator))
             ->getMockForAbstractClass();
@@ -67,19 +67,5 @@ class AbstractFileDriverTest extends \PHPUnit_Framework_TestCase
             ->will($this->returnValue(array('\stdClass')));
 
         $this->assertSame(array('\stdClass'), $this->driver->getAllClassNames($class));
-    }
-
-    public function testGetAllClassNamesThrowsRuntimeException()
-    {
-        $this->setExpectedException('RuntimeException');
-
-        $locator = $this->getMock('Metadata\Driver\FileLocatorInterface', array(), array(), '', false);
-        $driver = $this->getMockBuilder('Metadata\Driver\AbstractFileDriver')
-            ->setConstructorArgs(array($locator))
-            ->getMockForAbstractClass();
-        $class = new \ReflectionClass('\stdClass');
-        $locator->expects($this->never())->method('findAllClasses');
-
-        $driver->getAllClassNames($class);
     }
 }

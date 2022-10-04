@@ -4,7 +4,7 @@ namespace Metadata\Tests;
 
 use Metadata\ClassMetadata;
 
-class ClassMetadataTest extends \PHPUnit_Framework_TestCase
+class ClassMetadataTest extends \PHPUnit\Framework\TestCase
 {
     public function testConstructor()
     {

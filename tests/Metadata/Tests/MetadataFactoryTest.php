@@ -7,28 +7,22 @@ use Metadata\MergeableClassMetadata;
 use Metadata\ClassMetadata;
 use Metadata\MetadataFactory;
 
-class MetadataFactoryTest extends \PHPUnit_Framework_TestCase
+class MetadataFactoryTest extends \PHPUnit\Framework\TestCase
 {
     public function testGetMetadataForClass()
     {
-        $driver = $this->getMock('Metadata\Driver\DriverInterface');
+        $driver = $this->createMock('Metadata\Driver\DriverInterface');
 
         $driver
-            ->expects($this->at(0))
+            ->expects($this->exactly(2))
             ->method('loadMetadataForClass')
-            ->with($this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\TestObject')))
+            ->withConsecutive(
+                [$this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\TestObject'))],
+                [$this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\TestParent'))]
+            )
             ->will($this->returnCallback(function($class) {
                 return new ClassMetadata($class->getName());
-            }))
-        ;
-        $driver
-            ->expects($this->at(1))
-            ->method('loadMetadataForClass')
-            ->with($this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\TestParent')))
-            ->will($this->returnCallback(function($class) {
-                return new ClassMetadata($class->getName());
-            }))
-        ;
+            }));
 
         $factory = new MetadataFactory($driver);
         $metadata = $factory->getMetadataForClass('Metadata\Tests\Fixtures\TestParent');
@@ -39,24 +33,18 @@ class MetadataFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testGetMetadataForClassWhenMergeable()
     {
-        $driver = $this->getMock('Metadata\Driver\DriverInterface');
+        $driver = $this->createMock('Metadata\Driver\DriverInterface');
 
         $driver
-            ->expects($this->at(0))
+            ->expects($this->exactly(2))
             ->method('loadMetadataForClass')
-            ->with($this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\TestObject')))
+            ->withConsecutive(
+                [$this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\TestObject'))],
+                [$this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\TestParent'))]
+            )
             ->will($this->returnCallback(function($class) {
                 return new MergeableClassMetadata($class->getName());
-            }))
-        ;
-        $driver
-            ->expects($this->at(1))
-            ->method('loadMetadataForClass')
-            ->with($this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\TestParent')))
-            ->will($this->returnCallback(function($class) {
-                return new MergeableClassMetadata($class->getName());
-            }))
-        ;
+            }));
 
         $factory = new MetadataFactory($driver);
         $metadata = $factory->getMetadataForClass('Metadata\Tests\Fixtures\TestParent');
@@ -67,7 +55,7 @@ class MetadataFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testGetMetadataWithComplexHierarchy()
     {
-        $driver = $this->getMock('Metadata\Driver\DriverInterface');
+        $driver = $this->createMock('Metadata\Driver\DriverInterface');
 
         $driver
             ->expects($this->any())
@@ -109,7 +97,7 @@ class MetadataFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testGetMetadataWithCache()
     {
-        $driver = $this->getMock('Metadata\Driver\DriverInterface');
+        $driver = $this->createMock('Metadata\Driver\DriverInterface');
         $driver
             ->expects($this->once())
             ->method('loadMetadataForClass')
@@ -118,7 +106,7 @@ class MetadataFactoryTest extends \PHPUnit_Framework_TestCase
 
         $factory = new MetadataFactory($driver);
 
-        $cache = $this->getMock('Metadata\Cache\CacheInterface');
+        $cache = $this->createMock('Metadata\Cache\CacheInterface');
         $cache
             ->expects($this->once())
             ->method('loadClassMetadataFromCache')
@@ -140,7 +128,7 @@ class MetadataFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testGetMetadataReturnsNullIfNoMetadataIsFound()
     {
-        $driver = $this->getMock('Metadata\Driver\DriverInterface');
+        $driver = $this->createMock('Metadata\Driver\DriverInterface');
         $driver
             ->expects($this->once())
             ->method('loadMetadataForClass')
@@ -154,28 +142,17 @@ class MetadataFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testGetMetadataWithInterfaces()
     {
-        $driver = $this->getMock('Metadata\Driver\DriverInterface');
+        $driver = $this->createMock('Metadata\Driver\DriverInterface');
 
         $driver
-            ->expects($this->at(3))
+            ->expects($this->exactly(4))
             ->method('loadMetadataForClass')
-            ->with($this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\ComplexHierarchy\SubClassA')))
-        ;
-        $driver
-            ->expects($this->at(2))
-            ->method('loadMetadataForClass')
-            ->with($this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\ComplexHierarchy\InterfaceB')))
-        ;
-        $driver
-            ->expects($this->at(1))
-            ->method('loadMetadataForClass')
-            ->with($this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\ComplexHierarchy\BaseClass')))
-        ;
-        $driver
-            ->expects($this->at(0))
-            ->method('loadMetadataForClass')
-            ->with($this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\ComplexHierarchy\InterfaceA')))
-        ;
+            ->withConsecutive(
+                [$this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\ComplexHierarchy\InterfaceA'))],
+                [$this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\ComplexHierarchy\BaseClass'))],
+                [$this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\ComplexHierarchy\InterfaceB'))],
+                [$this->equalTo(new \ReflectionClass('Metadata\Tests\Fixtures\ComplexHierarchy\SubClassA'))]
+            );
 
         $factory = new MetadataFactory($driver);
         $factory->setIncludeInterfaces(true);
@@ -185,7 +162,7 @@ class MetadataFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testGetAllClassNames()
     {
-        $driver = $this->getMock('Metadata\Driver\AdvancedDriverInterface');
+        $driver = $this->createMock('Metadata\Driver\AdvancedDriverInterface');
         $driver
             ->expects($this->once())
             ->method('getAllClassNames')
@@ -197,14 +174,14 @@ class MetadataFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testGetAllClassNamesThrowsException()
     {
-        $this->setExpectedException('RuntimeException');
-        $factory = new MetadataFactory($this->getMock('Metadata\Driver\DriverInterface'));
+        $this->expectException('RuntimeException');
+        $factory = new MetadataFactory($this->createMock('Metadata\Driver\DriverInterface'));
         $factory->getAllClassNames();
     }
 
     public function testNotFoundMetadataIsCached()
     {
-        $driver = $this->getMock('Metadata\Driver\DriverInterface');
+        $driver = $this->createMock('Metadata\Driver\DriverInterface');
         $driver
             ->expects($this->once()) // This is the important part of this test
             ->method('loadMetadataForClass')
@@ -212,7 +189,7 @@ class MetadataFactoryTest extends \PHPUnit_Framework_TestCase
         ;
 
         $cachedMetadata = null;
-        $cache = $this->getMock('Metadata\Cache\CacheInterface');
+        $cache = $this->createMock('Metadata\Cache\CacheInterface');
         $cache
             ->expects($this->any())
             ->method('loadClassMetadataFromCache')
@@ -245,7 +222,7 @@ class MetadataFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testNotFoundMetadataIsNotCachedInDebug()
     {
-        $driver = $this->getMock('Metadata\Driver\DriverInterface');
+        $driver = $this->createMock('Metadata\Driver\DriverInterface');
         $driver
             ->expects($this->exactly(2))
             ->method('loadMetadataForClass')
@@ -253,7 +230,7 @@ class MetadataFactoryTest extends \PHPUnit_Framework_TestCase
         ;
 
         $cachedMetadata = null;
-        $cache = $this->getMock('Metadata\Cache\CacheInterface');
+        $cache = $this->createMock('Metadata\Cache\CacheInterface');
         $cache
             ->expects($this->any())
             ->method('loadClassMetadataFromCache')
