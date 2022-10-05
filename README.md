@@ -1,4 +1,4 @@
-JMS Serializer 1.7.0
+JMS Metadata 1.7.0
 ==========
 
 Learn more about it in its [documentation](https://github.com/schmittjoh/metadata/1.x).
